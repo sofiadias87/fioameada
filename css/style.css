@@ -16,9 +16,8 @@ body{
 @font-face {
     font-family: "Casino Madrid";
     src: local("Trickster"),
-      url("./fonts/CasinoMadrid.otf") format("opentype") tech(color-COLRv1), url("./fonts/CasinoMadrid.otf")
-        format("opentype"), url("CasinoMadrid.woff") format("woff");
-  }
+      url("./fonts/CasinoMadrid.otf") format("opentype")
+}
   
 
 /* navbar */
