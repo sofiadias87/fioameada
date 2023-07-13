@@ -1,0 +1,2994 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #F5EBDA;
+}
+
+.responsive {
+    float: initial;
+}
+
+
+@font-face {
+    font-family: "Casino Madrid";
+    src: local("Trickster"),
+      url("./fonts/CasinoMadrid.otf") format("opentype") tech(color-COLRv1), url("./fonts/CasinoMadrid.otf")
+        format("opentype"), url("CasinoMadrid.woff") format("woff");
+  }
+  
+
+/* navbar */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: transparent;
+    transition: background-color 2s ease;
+    z-index: 999;
+}
+
+.navbar.scrolled {
+    background: rgba(127, 79, 15, 0.42);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.1px);
+    -webkit-backdrop-filter: blur(8.1px);
+    
+}
+
+.navbar .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar .nav-links li {
+    margin-left: 20px;
+}
+
+.navbar .nav-links li a {
+    color: #efdac2;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    text-align: center;
+}
+
+.navbar .nav-links li a:hover {
+    color: #f8f1ea;
+    text-shadow: 2px 2px 3px rgba(38,29,3,0.72);
+    
+
+}
+
+.navbar .nav-links li a:active {
+    color: #ed9831;
+}
+
+.burger {
+    display: none;
+}
+ 
+@media (max-width: 878px) {
+    .navbar .nav-links {
+        display: none;
+    }
+
+    .navbar .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #5c3509e0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+    }
+
+    .navbar .nav-links.active li {
+        margin: 10px 0;
+    }
+
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+} 
+
+/*----parallax---*/
+
+/* home */
+
+
+.banner {
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 961px;    
+}
+
+.banner-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 34vh;
+}
+
+.banner h1 {
+    font-family: "Casino Madrid";
+    color: #F9F7F7;
+    font-size: 80pt;
+    text-align: center;
+    text-shadow: 3px 3px 3px rgba(38,29,3,0.72);
+    padding: 25px;
+    visibility: hidden;
+}
+
+.btn-contact {
+    font-family: "Casino Madrid";
+    font-size: 35pt;
+    color: #DDB079;
+    border: 2pt #DDB079 solid;
+    border-radius: 50px;
+    padding: 0px 10px;
+    background-color: transparent;
+    text-align: center;
+    visibility: hidden;
+}
+
+.btn-contact:hover {
+    color: #F9F7F7;
+    background-color: #DDB079;
+    text-shadow: 1px 1px 3px rgba(38,29,3,0.72);;
+    box-shadow: 2px 2px 5px rgba(38,29,3,0.72);
+}
+
+.btn-contact a {
+    color: #F9F7F7;
+    text-decoration: none;
+    
+}
+
+.btn-contact a:hover {
+    color: #F9F7F7;
+}
+
+
+.scroll {
+	width: 60px;
+	height: 60px;
+    visibility: hidden;
+	border: 2px solid #f5ebdab3;
+	border-radius: 50%;
+	position: relative;
+    margin-top: 11vh;
+    margin-bottom: 6vh;
+	animation: down 1s infinite;
+	-webkit-animation: down 1s infinite;
+	&::before {
+		content: '';
+		position: absolute;
+		top: 15px;
+		left: 18px;
+		width: 18px;
+		height: 18px;
+		border-left: 2px solid #f5ebdab3;
+  	    border-bottom: 2px solid #f5ebdab3;
+		transform: rotate(-45deg);
+	}
+    
+}
+
+@keyframes down {
+	0% {
+		transform: translate(0);
+	}
+	20% {
+		transform: translateY(15px);
+	}
+	40% {
+		transform: translate(0);
+	}
+}
+
+@-webkit-keyframes down {
+	0% {
+		transform: translate(0);
+	}
+	20% {
+		transform: translateY(15px);
+	}
+	40% {
+		transform: translate(0);
+	}
+}
+
+/* about us */
+
+.sobre-intro{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+
+
+.sobre-nos h1 {
+    font-family: "Casino Madrid";
+    font-size: 65pt;
+    color: #7F4F0F;
+    padding-top: 80px;
+    padding-left: 60px;    
+}
+
+.about-p {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 24px;
+    font-style: italic;
+    padding-top: 40px;
+    padding-left: 120px;
+    text-align: left;
+    min-width: 85vw;
+}
+
+.sobre-img {
+    float: right;
+}
+
+.scroll-bar {
+    overflow: hidden;
+    height: 80px;
+    background-color: #A2751F;
+    display: flex;    
+    flex-direction: row;
+    align-items: center;
+    margin: 30px 0px;
+}
+
+.scroll-content {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll 120s linear infinite;
+    font-family: 'Homemade Apple', cursive;
+    font-size: 26px;
+    color: #DDB079;
+}
+
+.scroll-content span {
+    display: inline-block;
+    padding-right: 10px;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* about us - repertorio */
+
+.repertorio {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.mapa{
+    padding: 20px;
+}
+
+.text-repertorio {
+    justify-content: center;
+    padding-left: 30px;
+
+}
+
+.repertorio-p {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 24px;
+    font-style: italic;
+    text-align: justify;
+    visibility: hidden;
+}
+
+.paragraph_button {
+    padding: 0px 50px;
+    padding-top: 65px;
+}
+
+.btn-saber-mais {
+    font-family: "Casino Madrid";
+    font-size: 30pt;
+    color: #7F4F0F;
+    border: 2pt #dac1a1 solid;
+    border-radius: 50px;
+    padding: 0px 15px;
+    background-color: transparent;
+    text-align: center;
+    margin-top: 10px; 
+    margin-bottom: 30px;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn-saber-mais a{
+    color: #dac1a1;
+}
+
+.btn-saber-mais a:hover {
+    color: #dac1a1;
+}
+
+.btn-saber-mais:hover {
+    background-color: #7F4F0F;
+    border:none;
+    color: #dac1a1;
+    text-shadow: 1px 1px 3px rgba(38,29,3,0.72);;
+    box-shadow: 2px 2px 5px rgba(38,29,3,0.72);
+}
+
+
+
+/* imprensa */
+
+.banner2 {
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    display: flex;
+}
+
+.banner2 h1 {
+    font-family: "Casino Madrid";
+    color: #F9F7F7;
+    font-size: 80pt;
+    text-align: center;
+    text-shadow: 3px 3px 3px rgba(38,29,3,0.72);
+}
+
+.imprensa {
+    align-items: center;
+}
+
+.testemunhos-imprensa {
+    padding: 70px;
+}
+
+.testemunhos-imprensa h3{
+    font-family: 'Homemade Apple', cursive;
+    font-style: italic;
+    font-weight: 100;
+    color: #F9F7F7;
+    font-size: 25px;
+    text-align: left;
+    line-height: 45px;
+    letter-spacing: 2px;
+}
+
+.testemunhos-imprensa p{
+    font-family: 'Work Sans', sans-serif;
+    color: #efdac2;
+    font-size: 20px;
+}
+
+.testemunho1 {
+    padding-bottom: 60px;
+}
+
+.testemunho2 {
+    padding-bottom: 60px;
+}
+
+.recortes-imprensa img {
+    float: right;
+}
+
+.btn-saber-mais2 {
+    font-family: "Casino Madrid";
+    font-size: 30pt;
+    color: #efdac2;
+    border: 2pt #efdac2 solid;
+    border-radius: 50px;
+    padding: 0px 15px;
+    background-color: transparent;
+    text-align: center;
+    margin-top: 10px; 
+    margin-bottom: 30px;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn-saber-mais2 a{
+    color: #efdac2;
+    
+}
+
+.btn-saber-mais2 a:hover {
+    color: #F9F7F7;
+}
+
+.btn-saber-mais2:hover {
+    background-color: #7F4F0F;
+    color: #F9F7F7;
+    text-shadow: 1px 1px 3px rgba(38,29,3,0.72);;
+    box-shadow: 2px 2px 5px rgba(38,29,3,0.72);
+    border: 2pt #7F4F0F solid;
+}
+
+.bar{
+    background-color: #efddc6;
+    color: #A2751F;
+    font-family: 'Homemade Apple', cursive;
+    font-size: 22px;
+    text-align: center;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/* eventos */
+
+.banner3 {
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    display: flex;
+}
+
+.banner3 h1 {
+    font-family: "Casino Madrid";
+    color: #F9F7F7;
+    font-size: 80pt;
+    text-align: center;
+    text-shadow: 3px 3px 3px rgba(38,29,3,0.72);
+}
+
+.eventos{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-items: flex-end;
+    justify-content: flex-end;
+    display: flex;
+    background-color: rgba(100, 52, 14, 0.389),rgba(100, 52, 14, 0.389);
+    min-height: 800px;
+}
+
+.event-history{
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+}
+
+.social-icons-eventos{
+    list-style:none;  
+    display: flex;
+    align-items: center; 
+    margin-bottom:80px;
+    justify-content: center;
+
+}
+
+  .social-icons-eventos h3{
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    color:#faa912;;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-right: 12px;
+    padding: 8px;
+    background-color: #7f4f0f;
+    align-items: center;
+    margin-bottom: 0;
+  }
+  
+  .social-icons-eventos li{
+    display:inline-block;
+    align-items: top;
+  }
+  
+  .social-icons-eventos li.title{
+    margin-right:15px;
+    text-transform:uppercase;
+    color:#96a2b2;
+    font-weight:700;
+    font-size:13px
+  }
+  
+  .social-icons-eventos a{
+    background-color:#f5ebdaa1;
+    color:#818a91;
+    font-size:16px;
+    display:inline-block;
+    line-height:44px;
+    width:44px;
+    height:44px;
+    text-align:center;
+    margin-right:8px;
+    border-radius:100%;
+    -webkit-transition:all .2s linear;
+    -o-transition:all .2s linear;
+    transition:all .2s linear
+  }
+  
+  .social-icons-eventos a:active,.social-icons-eventos a:focus,.social-icons-eventos a:hover{
+    color:#fff;
+  }
+  
+  .social-icons-eventos.size-sm a{
+    line-height:34px;
+    height:34px;
+    width:34px;
+    font-size:14px
+  }
+  
+  .social-icons-eventos a.instagram-eventos:hover{
+    background-color: #f5ebdae3;
+  }
+  
+  .social-icons-eventos a.facebook-eventos:hover{
+    background-color:#f5ebdae3;
+  }
+  
+  .social-icons-eventos a.youtube-eventos:hover{
+    background-color:#f5ebdae3;
+  }
+  
+
+.event-history {
+    max-width: 650px;
+    margin: 50px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    
+}
+
+.evento-1, .evento-2 {
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(244, 237, 227, 0.187);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.1px);
+    -webkit-backdrop-filter: blur(5.1px);
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 20px;
+}
+
+.evento-1:hover, .evento-2:hover {
+    background-color: #db930d34;
+}
+
+.tabs h4{
+    font-family: 'Roboto', sans-serif;
+    font-size: 26px;
+    color: #faa912;
+    text-shadow: 2px 2px 2px rgba(38, 29, 3, 0.629);
+}
+
+.tabs h5{
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    color: #faf9f6;
+    text-shadow: 1px 1px 2px rgba(38,29,3,0.72);
+}
+
+button:focus, input:focus,
+textarea:focus, select:focus {
+  outline: none; 
+}
+
+.tabs {
+  display: block;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0;
+  overflow: hidden; 
+  font-family: 'Work Sans', sans-serif;
+}
+
+.tabs [class^="tab"] label,
+.tabs [class*=" tab"] label {
+    font-family: 'Roboto', sans-serif;
+    color: #efedef;
+    text-shadow: 2px 2px 3px rgba(38,29,3,0.72);
+    cursor: pointer;
+    display: block;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1em;
+    padding: 20px 0px;
+    text-align: center; 
+}
+
+.tabs [class^="tab"] label:hover,
+.tabs [class*=" tab"] label:hover {
+    background-color: #db930d81;
+}
+
+.tabs [class^="tab"] label:active,
+.tabs [class*=" tab"] label:active {
+    background-color: #db930ddb;
+}
+
+.tabs [class^="tab"] label:focus,
+.tabs [class*=" tab"] label:focus {
+    background-color: #db930ddb;
+}
+
+.tabs [class^="tab"] [type="radio"],
+.tabs [class*=" tab"] [type="radio"] {
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: block;
+    width: 100%;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; 
+}
+
+.tabs [class^="tab"] [type="radio"]:hover, .tabs [class^="tab"] [type="radio"]:focus,
+.tabs [class*=" tab"] [type="radio"]:hover,
+.tabs [class*=" tab"] [type="radio"]:focus {
+    border-bottom: 1px solid  #db930d; 
+}
+
+.tabs [class^="tab"] [type="radio"]:checked,
+.tabs [class*=" tab"] [type="radio"]:checked {
+    border-bottom: 2px solid #db930d; 
+}
+
+.tabs [class^="tab"] [type="radio"]:checked + div,
+.tabs [class*=" tab"] [type="radio"]:checked + div {
+    opacity: 1; 
+}
+
+.tabs [class^="tab"] [type="radio"] + div,
+.tabs [class*=" tab"] [type="radio"] + div {
+    
+    opacity: 0;
+    width: 90%;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; 
+    margin: 10px 0px;
+}
+
+.tabs .tab-2 {
+    width: 50%; 
+}
+
+.tabs .tab-2 [type="radio"] + div {
+    width: 200%;
+    margin-left: 200%; 
+}
+
+.tabs .tab-2 [type="radio"]:checked + div {
+    margin-left: 0; 
+}
+
+.tabs .tab-2:last-child [type="radio"] + div {
+    margin-left: 100%; 
+}
+
+.tabs .tab-2:last-child [type="radio"]:checked + div {
+    margin-left: -100%; 
+}
+
+.scroll-bar_2 {
+    overflow: hidden;
+    height: 80px;
+    background-color: #db930d;
+    display: flex;    
+    flex-direction: row;
+    align-items: center;
+}
+
+.scroll-content_2 {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll 120s linear infinite;
+    font-family: 'Homemade Apple', cursive;
+    font-size: 26px;
+    color: #eacead;
+}
+
+.scroll-content_2 span {
+    display: inline-block;
+    padding-right: 10px;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+}
+
+
+/* galeria */
+
+.grid-container {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows:auto;
+    grid-gap: 20px;
+    grid-auto-flow:row;
+}
+  
+.grid-container .grid-item {
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+.grid-container .grid-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.zoom {
+    transition: transform 0.3s ease;
+}
+
+.zoom:hover {
+    transform: scale(1.1);
+}
+
+.grid-container .grid-item a{
+    cursor: zoom-in;
+}
+
+.grid-container .grid-item:nth-child(3n - 2) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.video-gallery{
+    display: flex;
+    align-items: center;
+    position: relative;
+    min-height: 100vh;
+    padding: 50px;
+}
+
+.video-gallery .video-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 10px;
+    width: 100%;
+}
+
+.video-gallery .video-container .video{
+    height: 45vh;
+    width: 40vw;
+    border-radius: 5px;
+    border: 5px solid #f5ebda3b;
+    box-shadow: 0 5px 5px rgba(71, 37, 9, 0.2); 
+    cursor: pointer;
+    overflow: hidden;
+
+}
+
+.video-gallery .video-container .video iframe{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: .2s linear;
+}
+
+.video-gallery .video-container .video:hover iframe{
+    transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-auto-rows: 300px;
+    }
+
+    .grid-container img{
+        border-image-slice: bottom;
+    }
+    
+    
+    .grid-container .grid-item-1{
+        visibility: hidden;
+    }
+  
+    .grid-container .grid-item:nth-child(3n - 2) {
+      grid-column: unset;
+      grid-row: unset;
+    }
+  }
+
+  /*contact*/
+
+.banner4 {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    display: flex;
+}
+
+.banner4 h1 {
+    font-family: "Casino Madrid";
+    color: #F9F7F7;
+    font-size: 80pt;
+    text-align: center;
+    text-shadow: 3px 3px 3px rgba(38,29,3,0.72);
+}
+
+.contactos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.form-box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+.left-column-contatos {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    width: 40%;
+    padding-top: 30px;
+    padding-left: 70px;
+}
+
+.right-column-contatos {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 50%;
+    padding: 30px 0;
+}
+
+.contactos h2 {
+    margin-bottom: 10px;
+    font-family: "Casino Madrid";
+    color: #7F4F0F;
+    font-size: 65pt;
+    align-items: center;
+}
+
+.contactos h6 {
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25pt;
+    color: #A1751F;
+    width: 90%;
+    font-weight: 300;
+    line-height: 50px;
+}
+
+
+.social-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.social-icons a {
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    padding: 10px;
+    outline: none;
+}
+
+.social-icons a i {
+    font-size: 30px;
+    min-width: 60px;
+}
+
+#insta {
+    background-color: #A1751F;
+    border-radius: 50px;
+    color: #F5EBDA;
+    padding: 15px 13px;
+    text-align: center;
+}
+
+#insta:hover {
+    background-color: #7f4f0f;
+}
+
+#facebook {
+    color: #A1751F;
+    font-size: 60px;
+    text-align: center;
+}
+
+#facebook:hover {
+    color: #7f4f0f;
+}
+
+#youtube {
+    background-color: #A1751F;
+    border-radius: 50px;
+    color: #F5EBDA;
+    padding: 15px 8px;
+    text-align: center;
+}
+
+#youtube:hover {
+    background-color: #7f4f0f;
+}
+
+#mail {
+    background-color: #A1751F;
+    border-radius: 50px;
+    color: #F5EBDA;
+    padding: 15px 12px;
+    text-align: center;
+}
+
+#mail:hover {
+    background-color: #7f4f0f;
+}
+  
+
+.form-field {
+    margin-bottom: 20px;
+    
+}
+
+.form-field label {
+    display: block;
+    margin-bottom: 5px;
+    color: #A1751F;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+.form-field input,
+.form-field textarea {
+    padding: 10px;
+    color: #A1751F;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    background-color: #a1761f19;
+    border: none;
+    margin-bottom: 10px;
+    width: 40vw;
+}
+
+.form-field textarea {
+    height: 100px;
+}
+
+.form-field ::placeholder {
+    color: #a1761f74;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    padding: 5px;
+}
+
+.form-submit {
+    font-family: "Casino Madrid";
+    font-size: 25pt;
+    color: #a1761f70;
+    border: 2pt #a1761f70 solid;
+    border-radius: 50px;
+    padding: 0px 10px;
+    background-color: transparent;
+    text-align: center;
+    width: fit-content;
+    max-width: 200px;
+}
+
+.form-submit:hover {
+    color: #F9F7F7;
+    background-color: #a1761f;
+    text-shadow: 1px 1px 3px rgba(38,29,3,0.72);;
+    box-shadow: 2px 2px 5px rgba(38,29,3,0.72);
+}
+
+.form-submit input {
+    background-color: transparent;
+    border:none;
+    color: #DDB079;
+    padding: 0px 35px;    
+}
+
+.form-submit input:hover {
+    background-color: transparent;
+    border:none;
+    color: #F9F7F7;
+    padding: 0px 35px;    
+}
+
+
+/* footer */
+
+.site-footer{
+  background-color:#7F4F0F;
+  padding:30px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#f5ebdaa1;
+  font-family: 'Roboto', sans-serif;
+  justify-content: space-around;
+}
+
+.site-footer hr{
+  border-top-color:#bbb;
+  opacity:0.5
+}
+
+.site-footer hr.small{
+  margin:20px 0
+}
+
+.site-footer h6{
+  font-family: 'Roboto', sans-serif;
+  color:#fff;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
+}
+
+.site-footer a{
+    font-family: 'Roboto', sans-serif;
+    color:#fff;
+    font-size:18px;
+}
+
+.site-footer a:hover{
+  text-decoration:none;
+}
+
+.footer-links{
+  list-style:none;
+  display:flex;
+  flex-direction: row;
+  justify-content: end;
+
+}
+
+.footer-links li{
+  display:block
+}
+
+.footer-links ul{
+    padding-left: 0;
+    justify-content: end;
+    display: flex;
+}
+
+.footer-links a{
+  padding-left: 10px;
+  font-family: 'Roboto', sans-serif;
+  color:#fff;
+  font-size:16px;
+}
+
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover{
+  color:#f5ebdaa1;
+  text-decoration:none;
+}
+
+.footer-links.inline li{
+  display:inline-block
+}
+
+.footer-download{
+    list-style:none;
+    display:flex;
+    flex-direction: column;
+    text-align: end;
+}
+
+.footer-download li{
+    display:block;
+    
+}
+
+.footer-download ul{
+    padding-left: 0;
+}
+
+.footer-download a{
+    font-family: 'Roboto', sans-serif;
+    color: #f5ebdaa1;
+    font-size:16px;
+
+}
+
+.footer-download a:active,.footer-download a:focus,.footer-download a:hover{
+    color:#f5ebdae3;
+    text-decoration:none;
+}
+
+.footer-download.inline li{
+    display:inline-block
+}
+
+.site-footer .social-icons{
+    text-align:right;
+}
+
+.site-footer .social-icons a{
+  width:40px;
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  margin-right:0;
+  border-radius:100%;
+  background-color:#33353d
+}
+
+.copyright-text{
+  margin:0
+}
+
+.copyright-text a{
+    margin:0;
+    color:#f5ebdae3;
+    font-family: 'Roboto', sans-serif;
+    font-size:16px;
+}
+
+.copyright-text a:hover{
+    color:#f5ebdaa1;
+}
+ 
+
+@media (max-width:991px){
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
+}
+
+@media (max-width:767px){
+  .site-footer
+  {
+    padding-bottom:0
+  }
+  .site-footer .copyright-text,.site-footer .social-icons
+  {
+    text-align:center
+  }
+}
+
+.social-icons-footer{
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none;  
+  display: flex;
+  justify-content:flex-end;
+}
+
+.social-icons-footer li{
+  display:inline-block;
+  margin-bottom:4px
+}
+
+.social-icons-footer li.title{
+  margin-right:15px;
+  text-transform:uppercase;
+  color:#96a2b2;
+  font-weight:700;
+  font-size:13px
+}
+
+.social-icons-footer a{
+  background-color:#f5ebdaa1;
+  color:#818a91;
+  font-size:16px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear
+}
+
+.social-icons-footer a:active,.social-icons a:focus,.social-icons a:hover{
+  color:#fff;
+}
+
+.social-icons-footer.size-sm a{
+  line-height:34px;
+  height:34px;
+  width:34px;
+  font-size:14px
+}
+
+.social-icons-footer a.instagram-footer:hover{
+  background-color: #f5ebdae3;
+}
+
+.social-icons-footer a.facebook-footer:hover{
+  background-color:#f5ebdae3;
+}
+
+.social-icons-footer a.youtube-footer:hover{
+  background-color:#f5ebdae3;
+}
+
+.hidden{
+    opacity: 0;
+    transition: all 1.2s;
+    transform: translateX(-100%);
+    filter: blur(10px);
+}
+
+.hidden-2{
+    opacity: 0;
+    transition: all 1.2s;
+    transform: translateY(30%);
+    filter: blur(10px);
+}
+
+
+
+.show{
+    opacity: 1;
+    transition: all 1.2s;
+    transform: translateX(0);
+    filter: blur(0);
+}
+
+
+/*MEDIA QUERIES*/
+
+@media (max-width: 1024px) {
+    .banner {
+        background-size: cover;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        min-height: 600px;    
+    }
+    
+    .banner-info {
+      padding-top: 30vh;
+    }
+    
+    .banner h1 {
+      font-size: 60pt;
+      padding: 5px;
+    }
+    
+    .btn-contact {
+      font-size: 25pt;
+    }
+
+    .scroll {
+        width: 60px;
+        height: 60px;
+        border: 2px solid #f5ebdab3;
+        border-radius: 50%;
+        position: relative;
+        margin: 2vh 0;
+        animation: down 1.5s infinite;
+        -webkit-animation: down 1.5s infinite;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 15px;
+            left: 18px;
+            width: 18px;
+            height: 18px;
+            border-left: 2px solid #f5ebdab3;
+              border-bottom: 2px solid #f5ebdab3;
+            transform: rotate(-45deg);
+        }
+    }
+    
+    @keyframes down {
+        0% {
+            transform: translate(0);
+        }
+        20% {
+            transform: translateY(15px);
+        }
+        40% {
+            transform: translate(0);
+        }
+    }
+    
+    @-webkit-keyframes down {
+        0% {
+            transform: translate(0);
+        }
+        20% {
+            transform: translateY(15px);
+        }
+        40% {
+            transform: translate(0);
+        }
+    }
+  
+    
+    .sobre-nos h1 {
+        font-family: "Casino Madrid";
+        font-size: 45pt;
+        color: #7F4F0F;
+        padding-top: 40px;
+        padding-left: 40px;    
+    }
+    
+    .about-p {
+        font-family: 'Work Sans', sans-serif;
+        font-size: 16px;
+        font-style: italic;
+        padding-top: 40px;
+        padding-left: 80px;
+        text-align: left;
+        line-height: 30px;
+    }
+    
+    .sobre-img {
+        float: right;
+        min-width: 600px;
+    }
+    
+    .scroll-bar {
+        overflow: hidden;
+        height: 60px;
+        background-color: #A2751F;
+        display: flex;    
+        flex-direction: row;
+        align-items: center;
+        margin: 30px 0px;
+    }
+    
+    .scroll-content {
+        display: inline-block;
+        white-space: nowrap;
+        animation: scroll 120s linear infinite;
+        font-family: 'Homemade Apple', cursive;
+        font-size: 20px;
+        color: #DDB079;
+    }
+    
+    .scroll-content span {
+        display: inline-block;
+        padding-right: 10px;
+    }
+    
+    @keyframes scroll {
+        0% { transform: translateX(0%); }
+        100% { transform: translateX(-100%); }
+    }
+    
+    /* about us - repertorio */
+    
+    .repertorio {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .mapa{
+        padding: 5px;
+        justify-content: center;
+    }
+    
+    .text-repertorio {
+        justify-content: center;
+    
+    }
+    
+    .repertorio-p {
+        font-family: 'Work Sans', sans-serif;
+        font-size: 16px;
+        font-style: italic;
+        text-align: left;
+        visibility: hidden;
+    }
+    
+    .paragraph_button {
+        padding: 0px 50px;
+        padding-top: 65px;
+    }
+    
+    .btn-saber-mais {
+        font-family: "Casino Madrid";
+        font-size: 24pt;
+        color: #7F4F0F;
+        border: 2pt #7F4F0F solid;
+        border-radius: 50px;
+        padding: 0px 15px;
+        background-color: transparent;
+        text-align: center;
+        margin-top: 10px; 
+        margin-bottom: 30px;
+    
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    .btn-saber-mais a{
+        color: #7F4F0F;
+    }
+    
+    .btn-saber-mais a:hover {
+        color: #F9F7F7;
+    }
+    
+    .btn-saber-mais:hover {
+        background-color: #7F4F0F;
+        color: #F9F7F7;
+        text-shadow: 1px 1px 3px rgba(38,29,3,0.72);;
+        box-shadow: 2px 2px 5px rgba(38,29,3,0.72);
+    }
+    
+    
+    
+    /* imprensa */
+    
+    .banner2 {
+        background-size: cover;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        align-items: center;
+        justify-content: center;
+        height: 300px;
+        display: flex;
+    }
+    
+    .banner2 h1 {
+        font-family: "Casino Madrid";
+        color: #F9F7F7;
+        font-size: 60pt;
+        text-align: center;
+        text-shadow: 3px 3px 3px rgba(38,29,3,0.72);
+    }
+    
+    .imprensa {
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    
+    .testemunhos-imprensa {
+        padding: 60px;
+    }
+    
+    .testemunhos-imprensa h3{
+        font-family: 'Homemade Apple', cursive;
+        font-style: italic;
+        font-weight: 100;
+        color: #F9F7F7;
+        font-size: 20px;
+        text-align: left;
+        line-height: 40px;
+        letter-spacing: 2px;
+        min-width: 80vw;
+    }
+    
+    .testemunhos-imprensa p{
+        font-family: 'Work Sans', sans-serif;
+        color: #efdac2;
+        font-size: 20px;
+    }
+    
+    .testemunho1 {
+        padding-bottom: 60px;
+    }
+    
+    .testemunho2 {
+        padding-bottom: 60px;
+    }
+    
+    .recortes-imprensa {
+        visibility: hidden;
+    }
+    
+    .btn-saber-mais2 {
+        font-family: "Casino Madrid";
+        font-size: 24pt;
+        color: #efdac2;
+        border: 2pt #efdac2 solid;
+        border-radius: 50px;
+        padding: 0px 15px;
+        background-color: transparent;
+        text-align: center;
+        margin-top: 10px; 
+        margin-bottom: 30px;
+    
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    .btn-saber-mais2 a{
+        color: #efdac2;
+        
+    }
+    
+    .btn-saber-mais2 a:hover {
+        color: #F9F7F7;
+    }
+    
+    .btn-saber-mais2:hover {
+        background-color: #7F4F0F;
+        color: #F9F7F7;
+        text-shadow: 1px 1px 3px rgba(38,29,3,0.72);;
+        box-shadow: 2px 2px 5px rgba(38,29,3,0.72);
+        border: 2pt #7F4F0F solid;
+    }
+    
+    .bar{
+        background-color: #efddc6;
+        color: #A2751F;
+        font-family: 'Homemade Apple', cursive;
+        font-size: 18px;
+        text-align: center;
+        padding: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 25px;
+    }
+
+    /* eventos */
+
+    .banner3 {
+        background-size: cover;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        align-items: center;
+        justify-content: center;
+        height: 300px;
+        display: flex;
+    }
+
+    .banner3 h1 {
+        font-family: "Casino Madrid";
+        color: #F9F7F7;
+        font-size: 60pt;
+        text-align: center;
+        text-shadow: 3px 3px 3px rgba(38,29,3,0.72);
+    }
+
+    .eventos{
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        align-items: flex-end;
+        justify-content: flex-end;
+        display: flex;
+        background-color: rgba(100, 52, 14, 0.389),rgba(100, 52, 14, 0.389);
+        min-height: 800px;
+    }
+
+    .event-history{
+        max-width: 600px;
+        margin-bottom: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: end;
+    }
+
+    .social-icons-eventos{
+        list-style:none;  
+        display: flex;
+        align-items: center; 
+        margin-bottom:80px;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .social-icons-eventos h3{
+        font-family: 'Roboto', sans-serif;
+        font-size: 18px;
+        color:#faa912;;
+        font-weight: 300;
+        text-transform: uppercase;
+        margin-right: 12px;
+        padding: 8px;
+        background-color: #7f4f0f;
+        align-items: center;
+        margin-bottom: 0;
+    }
+    
+    .social-icons-eventos li{
+        display:inline-block;
+        align-items: top;
+    }
+    
+    .social-icons-eventos li.title{
+        margin-right:15px;
+        text-transform:uppercase;
+        color:#96a2b2;
+        font-weight:700;
+        font-size:10px
+    }
+    
+    .social-icons-eventos a{
+        background-color:#f5ebdaa1;
+        color:#818a91;
+        font-size:12px;
+        display:inline-block;
+        line-height:44px;
+        width:44px;
+        height:44px;
+        text-align:center;
+        margin-right:8px;
+        border-radius:100%;
+        -webkit-transition:all .2s linear;
+        -o-transition:all .2s linear;
+        transition:all .2s linear
+    }
+    
+    .social-icons-eventos a:active,.social-icons-eventos a:focus,.social-icons-eventos a:hover{
+        color:#fff;
+    }
+    
+    .social-icons-eventos.size-sm a{
+        line-height:34px;
+        height:34px;
+        width:34px;
+        font-size:10px
+    }
+    
+    .social-icons-eventos a.instagram-eventos:hover{
+        background-color: #f5ebdae3;
+    }
+    
+    .social-icons-eventos a.facebook-eventos:hover{
+        background-color:#f5ebdae3;
+    }
+    
+    .social-icons-eventos a.youtube-eventos:hover{
+        background-color:#f5ebdae3;
+    }
+    
+
+    .event-history {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        
+    }
+
+    .evento-1, .evento-2 {
+        display: flex;
+        flex-direction: row;
+        background-color: rgba(244, 237, 227, 0.187);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5.1px);
+        -webkit-backdrop-filter: blur(5.1px);
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+        padding: 20px;
+    }
+
+    .evento-1:hover, .evento-2:hover {
+        background-color: #db930d34;
+    }
+
+    .tabs h4{
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        color: #faa912;
+        text-shadow: 2px 2px 2px rgba(38, 29, 3, 0.629);
+    }
+
+    .tabs h5{
+        font-family: 'Roboto', sans-serif;
+        font-size: 18px;
+        color: #faf9f6;
+        text-shadow: 1px 1px 2px rgba(38,29,3,0.72);
+    }
+
+    button:focus, input:focus,
+    textarea:focus, select:focus {
+    outline: none; 
+    }
+
+    .tabs {
+    display: block;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0;
+    overflow: hidden; 
+    font-family: 'Work Sans', sans-serif;
+    }
+
+    .tabs [class^="tab"] label,
+    .tabs [class*=" tab"] label {
+        font-family: 'Roboto', sans-serif;
+        color: #efedef;
+        text-shadow: 2px 2px 3px rgba(38,29,3,0.72);
+        cursor: pointer;
+        display: block;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 1em;
+        padding: 20px 0px;
+        text-align: center; 
+    }
+
+    .tabs [class^="tab"] label:hover,
+    .tabs [class*=" tab"] label:hover {
+        background-color: #db930d81;
+    }
+
+    .tabs [class^="tab"] label:active,
+    .tabs [class*=" tab"] label:active {
+        background-color: #db930ddb;
+    }
+
+    .tabs [class^="tab"] label:focus,
+    .tabs [class*=" tab"] label:focus {
+        background-color: #db930ddb;
+    }
+
+    .tabs [class^="tab"] [type="radio"],
+    .tabs [class*=" tab"] [type="radio"] {
+        cursor: pointer;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        display: block;
+        width: 100%;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out; 
+    }
+
+    .tabs [class^="tab"] [type="radio"]:hover, .tabs [class^="tab"] [type="radio"]:focus,
+    .tabs [class*=" tab"] [type="radio"]:hover,
+    .tabs [class*=" tab"] [type="radio"]:focus {
+        border-bottom: 1px solid  #db930d; 
+    }
+
+    .tabs [class^="tab"] [type="radio"]:checked,
+    .tabs [class*=" tab"] [type="radio"]:checked {
+        border-bottom: 2px solid #db930d; 
+    }
+
+    .tabs [class^="tab"] [type="radio"]:checked + div,
+    .tabs [class*=" tab"] [type="radio"]:checked + div {
+        opacity: 1; 
+    }
+
+    .tabs [class^="tab"] [type="radio"] + div,
+    .tabs [class*=" tab"] [type="radio"] + div {
+        
+        opacity: 0;
+        width: 90%;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out; 
+        margin: 10px 0px;
+    }
+
+    .tabs .tab-2 {
+        width: 50%; 
+    }
+
+    .tabs .tab-2 [type="radio"] + div {
+        width: 200%;
+        margin-left: 200%; 
+    }
+
+    .tabs .tab-2 [type="radio"]:checked + div {
+        margin-left: 0; 
+    }
+
+    .tabs .tab-2:last-child [type="radio"] + div {
+        margin-left: 100%; 
+    }
+
+    .tabs .tab-2:last-child [type="radio"]:checked + div {
+        margin-left: -100%; 
+    }
+
+    .scroll-bar_2 {
+        overflow: hidden;
+        height: 80px;
+        background-color: #db930d;
+        display: flex;    
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .scroll-content_2 {
+        display: inline-block;
+        white-space: nowrap;
+        animation: scroll 120s linear infinite;
+        font-family: 'Homemade Apple', cursive;
+        font-size: 26px;
+        color: #eacead;
+    }
+
+    .scroll-content_2 span {
+        display: inline-block;
+        padding-right: 10px;
+    }
+
+    @keyframes scroll {
+        0% { transform: translateX(0%); }
+        100% { transform: translateX(-100%); }
+    }
+
+
+    /* galeria */
+
+    .grid-container {
+        width: 100%;
+        max-width: 1500px;
+        margin: 0 auto;
+        padding: 50px 20px;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-auto-rows:auto;
+        grid-gap: 20px;
+        grid-auto-flow:row;
+    }
+    
+    .grid-container .grid-item {
+        position: relative;
+        overflow: hidden;
+        background-color: transparent;
+    }
+
+    .grid-container .grid-item img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    .zoom {
+        transition: transform 0.3s ease;
+    }
+
+    .zoom:hover {
+        transform: scale(1.1);
+    }
+
+    .grid-container .grid-item a{
+        cursor: zoom-in;
+    }
+
+    .grid-container .grid-item:nth-child(3n - 2) {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+    .scroll-bar_2 {
+        overflow: hidden;
+        height: 60px;
+        background-color: #A2751F;
+        display: flex;    
+        flex-direction: row;
+        align-items: center;
+        margin: 30px 0px;
+    }
+    
+    .scroll-content_2 {
+        display: inline-block;
+        white-space: nowrap;
+        animation: scroll 120s linear infinite;
+        font-family: 'Homemade Apple', cursive;
+        font-size: 20px;
+        color: #DDB079;
+    }
+    
+    .scroll-content span {
+        display: inline-block;
+        padding-right: 10px;
+    }
+    
+    @keyframes scroll {
+        0% { transform: translateX(0%); }
+        100% { transform: translateX(-100%); }
+    }
+
+    .video-gallery{
+        display: flex;
+        align-items: center;
+        position: relative;
+        min-height: 100vh;
+        margin-bottom: 40px;
+    }
+
+    .video-gallery .video-container{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .video-gallery .video-container .video{
+        height: 390px;
+        width: 700px;
+        border-radius: 5px;
+        border: 5px solid #f5ebda3b;
+        box-shadow: 0 5px 5px rgba(71, 37, 9, 0.2); 
+        cursor: pointer;
+        overflow: hidden;
+
+    }
+
+    .video-gallery .video-container .video iframe{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        transition: .2s linear;
+    }
+
+    .video-gallery .video-container .video:hover iframe{
+        transform: scale(1.02);
+    }
+
+
+    @media (max-width: 768px) {
+        .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-auto-rows: 300px;
+        }
+
+        .grid-container img{
+            border-image-slice: bottom;
+        }
+        
+        
+        .grid-container .grid-item-1{
+            visibility: hidden;
+        }
+    
+        .grid-container .grid-item:nth-child(3n - 2) {
+        grid-column: unset;
+        grid-row: unset;
+        }
+    }
+
+    /*contact*/
+
+    .banner4 {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        align-items: center;
+        justify-content: center;
+        height: 300px;
+        display: flex;
+    }
+
+    .banner4 h1 {
+        font-family: "Casino Madrid";
+        color: #F9F7F7;
+        font-size: 80pt;
+        text-align: center;
+        text-shadow: 3px 3px 3px rgba(38,29,3,0.72);
+    }
+
+    .contactos {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .form-box {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .left-column-contatos {
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        width: 40%;
+        padding-top: 30px;
+        padding-left: 70px;
+    }
+    
+    .right-column-contatos {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 50%;
+        padding: 30px 0;
+    }
+    
+    .contactos h2 {
+        margin-bottom: 10px;
+        font-family: "Casino Madrid";
+        color: #7F4F0F;
+        font-size: 50pt;
+        align-items: center;
+    }
+    
+    .contactos h6 {
+        margin-bottom: 20px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 18pt;
+        color: #A1751F;
+        width: 90%;
+        font-weight: 300;
+        line-height: 50px;
+    }
+    
+    
+    .social-icons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .social-icons a {
+        cursor: pointer;
+        align-items: center;
+        display: flex;
+        text-align: center;
+        padding: 5px;
+        outline: none;
+    }
+    
+    .social-icons a i {
+        font-size: 25px;
+        min-width: 40px;
+    }
+    
+    #insta {
+        background-color: #A1751F;
+        border-radius: 50px;
+        color: #F5EBDA;
+        padding: 12px 13px;
+        text-align: center;
+    }
+    
+    #insta:hover {
+        background-color: #7f4f0f;
+    }
+    
+    #facebook {
+        color: #A1751F;
+        font-size: 50px;
+        text-align: center;
+    }
+    
+    #facebook:hover {
+        color: #7f4f0f;
+    }
+    
+    #youtube {
+        background-color: #A1751F;
+        border-radius: 50px;
+        color: #F5EBDA;
+        padding: 12px 10px;
+        text-align: center;
+    }
+    
+    #youtube:hover {
+        background-color: #7f4f0f;
+    }
+    
+    #mail {
+        background-color: #A1751F;
+        border-radius: 50px;
+        color: #F5EBDA;
+        padding: 12px 12px;
+        text-align: center;
+    }
+    
+    #mail:hover {
+        background-color: #7f4f0f;
+    }
+      
+    
+    .form-field {
+        margin-bottom: 20px;
+        
+    }
+    
+    .form-field label {
+        display: block;
+        margin-bottom: 5px;
+        color: #A1751F;
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+    }
+    
+    .form-field input,
+    .form-field textarea {
+        padding: 10px;
+        color: #A1751F;
+        font-family: 'Roboto', sans-serif;
+        font-size: 18px;
+        background-color: #a1761f19;
+        border: none;
+        margin-bottom: 10px;
+        width: 40vw;
+    }
+    
+    .form-field textarea {
+        height: 100px;
+    }
+    
+    .form-field ::placeholder {
+        color: #a1761f74;
+        font-family: 'Roboto', sans-serif;
+        font-size: 18px;
+        padding: 5px;
+    }
+    
+    .form-submit {
+        font-family: "Casino Madrid";
+        font-size: 25pt;
+        color: #a1761f70;
+        border: 2pt #a1761f70 solid;
+        border-radius: 50px;
+        padding: 0px 10px;
+        background-color: transparent;
+        text-align: center;
+        width: fit-content;
+        max-width: 200px;
+    }
+    
+    .form-submit:hover {
+        color: #F9F7F7;
+        background-color: #a1761f;
+        text-shadow: 1px 1px 3px rgba(38,29,3,0.72);;
+        box-shadow: 2px 2px 5px rgba(38,29,3,0.72);
+    }
+    
+    .form-submit input {
+        background-color: transparent;
+        border:none;
+        color: #DDB079;
+        padding: 0px 35px;    
+    }
+    
+    .form-submit input:hover {
+        background-color: transparent;
+        border:none;
+        color: #F9F7F7;
+        padding: 0px 35px;    
+    }
+
+
+    /* footer */
+
+    .site-footer{
+        background-color:#7F4F0F;
+        padding:45px 0 20px;
+        font-size:14px;
+        line-height:24px;
+        color:#f5ebdaa1;
+        font-family: 'Roboto', sans-serif;
+        justify-content: space-around;
+    }
+
+    .site-footer hr{
+        border-top-color:#bbb;
+        opacity:0.5
+    }
+
+    .site-footer hr.small{
+        margin:20px 0
+    }
+
+    .site-footer h6{
+        font-family: 'Roboto', sans-serif;
+        color:#fff;
+        font-size:14px;
+        text-transform:uppercase;
+        margin-top:5px;
+        letter-spacing:2px
+        }
+
+    .site-footer a{
+        font-family: 'Roboto', sans-serif;
+        color:#fff;
+        font-size:14px;
+    }
+
+    .site-footer a:hover{
+        text-decoration:none;
+    }
+
+    .footer-links{
+        list-style:none;
+        display:flex;
+        flex-direction: row;
+        justify-content: end;
+
+    }
+
+
+    .footer-links ul{
+        padding-left: 0;
+        justify-content: end;
+        display: flex;
+    }
+
+    .footer-links a{
+        padding-left: 10px;
+        font-family: 'Roboto', sans-serif;
+        color:#fff;
+        font-size:13px;
+    }
+
+    .footer-links a:active,.footer-links a:focus,.footer-links a:hover{
+    color:#f5ebdaa1;
+    text-decoration:none;
+    }
+
+    .footer-links.inline li{
+    display:inline-block
+    }
+
+    .footer-download{
+        list-style:none;
+        display:flex;
+        flex-direction: column;
+        text-align: end;
+    }
+
+    .footer-download li{
+        display:block;
+        
+    }
+
+    .footer-download ul{
+        padding-left: 0;
+    }
+
+    .footer-download a{
+        font-family: 'Roboto', sans-serif;
+        color: #f5ebdaa1;
+        font-size:14px;
+
+    }
+
+    .footer-download a:active,.footer-download a:focus,.footer-download a:hover{
+        color:#f5ebdae3;
+        text-decoration:none;
+    }
+
+    .footer-download.inline li{
+        display:inline-block
+    }
+
+    .site-footer .social-icons{
+        text-align:right;
+    }
+
+    .site-footer .social-icons a{
+    width:30px;
+    height:30px;
+    line-height:40px;
+    margin-left:6px;
+    margin-right:0;
+    border-radius:100%;
+    background-color:#33353d
+    }
+
+    .copyright-text{
+    margin:0
+    }
+
+    .copyright-text a{
+        margin:0;
+        color:#f5ebdae3;
+        font-family: 'Roboto', sans-serif;
+        font-size:14px;
+    }
+
+    .copyright-text a:hover{
+        color:#f5ebdaa1;
+    }
+    
+
+    @media (max-width:991px){
+    .site-footer [class^=col-]
+    {
+        margin-bottom:30px
+    }
+    }
+
+    @media (max-width:767px){
+    .site-footer
+    {
+        padding-bottom:0
+    }
+    .site-footer .copyright-text,.site-footer .social-icons
+    {
+        text-align:center
+    }
+    } 
+
+    .social-icons-footer{
+    padding-left:0;
+    margin-bottom:0;
+    list-style:none;  
+    display: flex;
+    justify-content:flex-end;
+    }
+
+    .social-icons-footer li{
+    display:inline-block;
+    margin-bottom:4px
+    }
+
+    .social-icons-footer li.title{
+    margin-right:15px;
+    text-transform:uppercase;
+    color:#96a2b2;
+    font-weight:700;
+    font-size:13px
+    }
+
+    .social-icons-footer a{
+    background-color:#f5ebdaa1;
+    color:#818a91;
+    font-size:16px;
+    display:inline-block;
+    line-height:44px;
+    width:44px;
+    height:44px;
+    text-align:center;
+    margin-right:8px;
+    border-radius:100%;
+    -webkit-transition:all .2s linear;
+    -o-transition:all .2s linear;
+    transition:all .2s linear
+    }
+
+    .social-icons-footer a:active,.social-icons a:focus,.social-icons a:hover{
+    color:#fff;
+    }
+
+    .social-icons-footer.size-sm a{
+    line-height:34px;
+    height:34px;
+    width:34px;
+    font-size:14px
+    }
+
+    .social-icons-footer a.instagram-footer:hover{
+    background-color: #f5ebdae3;
+    }
+
+    .social-icons-footer a.facebook-footer:hover{
+    background-color:#f5ebdae3;
+    }
+
+    .social-icons-footer a.youtube-footer:hover{
+    background-color:#f5ebdae3;
+    }
+}
+
+@media (max-width: 820px) {
+    .banner {
+      min-height: 550px;
+    }
+    
+    .banner-info {
+      padding-top: 25vh;
+    }
+    
+    .banner h1 {
+      font-size: 45pt;
+      padding: 20px 40px;
+    }
+    
+    .btn-contact {
+      font-size: 20pt;
+    }
+
+    .scroll {
+        width: 40px;
+        height: 40px;
+        border: 2px solid #f5ebdab3;
+        border-radius: 50%;
+        position: relative;
+        margin-top: 8vh;
+        animation: down 1.5s infinite;
+        -webkit-animation: down 1.5s infinite;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 12px;
+            width: 12px;
+            height: 12px;
+            border-left: 2px solid #f5ebdab3;
+              border-bottom: 2px solid #f5ebdab3;
+            transform: rotate(-45deg);
+        }
+    }
+
+    .sobre-nos h1 {
+        font-size: 45pt;   
+    }
+    
+    .about-p {
+        font-size: 16px;
+    }
+    
+    .sobre-img {
+        min-width: 600px;
+    }
+    
+    .mapa{
+        padding: 1px;
+    }
+
+    .frase_FAM{
+        display: none;
+    }
+    
+    
+    .repertorio-p {
+        font-size: 16px;
+        text-align: left;
+        visibility: hidden;
+    }
+    
+    .btn-saber-mais {
+        font-size: 20pt;
+    
+    }
+    
+    .banner2 {
+        height: 200px;
+    }
+    
+    .banner2 h1 {
+        font-size: 45pt;
+    }
+    
+    
+    .testemunhos-imprensa h3{
+        font-size: 20px;
+    }
+    
+    .testemunhos-imprensa p{
+        font-size: 16px;
+    }
+    
+    .testemunho1 {
+        padding-bottom: 30px;
+    }
+    
+    .testemunho2 {
+        padding-bottom: 30px;
+    }
+    
+        
+    .btn-saber-mais2 {
+        font-size: 20pt;
+    
+    }
+    
+    .bar{
+        display: none;
+    }
+
+    .banner3 {
+        height: 200px;
+    }
+
+    .banner3 h1 {
+        font-size: 45pt;
+    }
+    
+    .banner4 {
+        height: 200px;
+    }
+
+    .banner4 h1 {
+        font-size: 45pt;
+    }
+    
+    .left-column-contatos {
+        padding: 20px;
+        width: 40%;
+        padding-top: 30px;
+    }
+    
+    .right-column-contatos {
+        width: 40%;
+        padding: 30px 20px;
+    }
+    
+    .contactos h2 {
+        font-size: 34pt;
+    }
+    
+    .contactos h6 {
+        font-size: 16pt;
+        width: 90%;
+        line-height: 30px;
+    }
+    
+    
+    
+    .social-icons a i {
+        font-size: 20px;
+    }
+    
+    #insta {
+        padding: 10px 11px;
+    }
+
+    #facebook {
+        font-size: 40px;
+    }
+    
+    #youtube {
+        padding: 10px 8px;
+    }
+    #mail {
+        padding: 10px 10px;
+    }
+    
+    .form-field label {
+        font-size: 18px;
+    }
+    
+    .form-field input,
+    .form-field textarea {
+        font-size: 16px;
+    }
+    
+    .form-field ::placeholder {
+        font-size: 16px;
+    }
+    
+    .form-submit {
+        font-size: 20pt;
+    }
+
+
+    .footer-links a{
+        display: none;
+    }
+
+
+    .footer-download{
+        list-style:none;
+        display:flex;
+        flex-direction: column;
+        text-align: end;
+        align-items: top;
+        margin: 0;
+    }
+
+    .right-links{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+
+}
+
+@media (max-width: 768px) {
+
+    .testemunhos-imprensa {
+        padding: 60px;
+    }
+
+    .testemunhos-imprensa h3{
+        font-size: 18px;
+    }
+    
+    .testemunhos-imprensa p{
+        font-size: 14px;
+    }
+    
+    .testemunho1 {
+        padding-bottom: 10px;
+    }
+    
+    .testemunho2 {
+        padding-bottom: 10px;
+    }
+}
+
+@media (max-width: 660px) {
+    .banner {
+      min-height: 910px;
+    }
+    
+    .banner-info {
+      padding-top: 25vh;
+    }
+    
+    .banner h1 {
+      font-size: 45pt;
+      padding: 40px;
+    }
+    
+    .btn-contact {
+      font-size: 20pt;
+    }
+
+    .scroll {
+        width: 40px;
+        height: 40px;
+        border: 2px solid #f5ebdab3;
+        border-radius: 50%;
+        position: relative;
+        margin-top: 8vh;
+        animation: down 1.5s infinite;
+        -webkit-animation: down 1.5s infinite;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 12px;
+            width: 12px;
+            height: 12px;
+            border-left: 2px solid #f5ebdab3;
+              border-bottom: 2px solid #f5ebdab3;
+            transform: rotate(-45deg);
+        }
+    }
+    
+    @keyframes down {
+        0% {
+            transform: translate(0);
+        }
+        20% {
+            transform: translateY(15px);
+        }
+        40% {
+            transform: translate(0);
+        }
+    }
+    
+    @-webkit-keyframes down {
+        0% {
+            transform: translate(0);
+        }
+        20% {
+            transform: translateY(15px);
+        }
+        40% {
+            transform: translate(0);
+        }
+    }
+
+    .imprensa{
+        height: 950px;
+    }
+    
+}
+
+@media (max-width: 414px) {
+    .banner {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        min-height: 900px;    
+    }
+    
+    .banner-info {
+      padding-top: 25vh;
+    }
+    
+    .banner h1 {
+      font-size: 45pt;
+      padding: 20px;
+    }
+    
+    .btn-contact {
+      font-size: 25pt;
+    }
+
+    .scroll {
+        width: 40px;
+        height: 40px;
+        border: 2px solid #f5ebdab3;
+        border-radius: 50%;
+        position: relative;
+        margin-top: 8vh;
+        animation: down 1.5s infinite;
+        -webkit-animation: down 1.5s infinite;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 12px;
+            width: 12px;
+            height: 12px;
+            border-left: 2px solid #f5ebdab3;
+              border-bottom: 2px solid #f5ebdab3;
+            transform: rotate(-45deg);
+        }
+    }
+    
+    @keyframes down {
+        0% {
+            transform: translate(0);
+        }
+        20% {
+            transform: translateY(15px);
+        }
+        40% {
+            transform: translate(0);
+        }
+    }
+    
+    @-webkit-keyframes down {
+        0% {
+            transform: translate(0);
+        }
+        20% {
+            transform: translateY(15px);
+        }
+        40% {
+            transform: translate(0);
+        }
+    }
+    
+    .testemunho3{
+        display: none;
+    }
+
+    .imprensa{
+        height: 800px;
+    }
+
+    .sobre-nos h1 {
+        font-size: 40pt;  
+    }
+    
+    .about-p {
+        font-size: 16px;
+    }
+    
+    .sobre-img {
+        min-width: 150px;
+    }
+    
+    
+    /* about us - repertorio */
+    
+    .repertorio {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .mapa{
+        padding: 5px;
+        justify-content: center;
+    }
+    
+    .text-repertorio {
+        justify-content: center;
+    
+    }
+    
+    
+    
+    /* imprensa */
+    
+    .banner2 {
+        background-position: center;
+        height: 200px;
+    }
+    
+    .banner2 h1 {
+        font-size: 45pt;
+    }
+    
+    .testemunhos-imprensa {
+        padding: 40px;
+    }
+    
+
+    /* eventos */
+
+    .social-icons-eventos h3{
+        display: none;
+    }
+    
+    .social-icons-eventos li.title{
+        margin-right:15px;
+        text-transform:uppercase;
+        color:#96a2b2;
+        font-weight:700;
+        font-size:10px
+    }
+    
+    
+    .event-history {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        
+    }
+
+    .contacts-container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .form-box{
+        width: 100%;
+    }
+    
+    .contactos h2 {
+        font-size: 34pt;
+    }
+    
+    .contactos h6 {
+        font-size: 16pt;
+        line-height: 30px;
+    }
+    
+    .social-icons a i {
+        font-size: 20px;
+    }
+    
+    #insta {
+        padding: 10px 11px;
+    }
+
+    #facebook {
+        font-size: 40px;
+    }
+    
+    #youtube {
+        padding: 10px 8px;
+    }
+    #mail {
+        padding: 10px 10px;
+    }
+    
+    .form-field label {
+        font-size: 18px;
+    }
+    
+    .form-field input,
+    .form-field textarea {
+        font-size: 16px;
+    }
+    
+    .form-field ::placeholder {
+        font-size: 16px;
+    }
+    
+    .form-submit {
+        font-size: 20pt;
+    }
+
+
+    .footer-links a{
+        display: none;
+    }
+
+
+    .footer-download{
+        list-style:none;
+        display:flex;
+        flex-direction: column;
+        text-align: end;
+        align-items: top;
+        margin: 0;
+    }
+
+    .right-links{
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 20px;
+    }
+
+    .social-icons-footer h6{
+        padding-left: 20px;
+    }
+
+    .social-icons-footer p{
+        padding-left: 20px;
+    }
+
+    .social-icons-footer{
+        justify-content: center;
+    }
+
+    .site-footer{
+        justify-content: center;
+    }
+    
+    .site-footer h6{
+        justify-content: center;
+    }
+
+}
+  
+
