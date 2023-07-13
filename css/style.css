@@ -19,7 +19,7 @@ body{
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -42,6 +42,7 @@ body{
     margin: 0;
     padding: 0;
     display: flex;
+    padding-right: 20px;
 }
 
 .navbar .nav-links li {
@@ -83,8 +84,8 @@ body{
         background-color: #5c3509e0;
         position: absolute;
         top: 100%;
-        left: 0;
-        width: 100%;
+        right: 0;
+        min-width: 100%;
     }
 
     .navbar .nav-links.active li {
@@ -248,15 +249,17 @@ body{
     flex-direction: row;
     align-items: center;
     margin: 30px 0px;
+    width: 100%;
 }
 
 .scroll-content {
     display: inline-block;
     white-space: nowrap;
-    animation: scroll 120s linear infinite;
+    animation: scroll 60s linear infinite;
     font-family: 'Homemade Apple', cursive;
     font-size: 26px;
     color: #DDB079;
+    width: 100%;
 }
 
 .scroll-content span {
@@ -293,7 +296,6 @@ body{
     font-size: 24px;
     font-style: italic;
     text-align: justify;
-    visibility: hidden;
 }
 
 .paragraph_button {
@@ -360,6 +362,7 @@ a {
 
 .imprensa {
     align-items: center;
+    width: 100%;
 }
 
 .testemunhos-imprensa {
@@ -714,15 +717,17 @@ textarea:focus, select:focus {
     display: flex;    
     flex-direction: row;
     align-items: center;
+    width: 100%;
 }
 
 .scroll-content_2 {
     display: inline-block;
     white-space: nowrap;
-    animation: scroll 120s linear infinite;
+    animation: scroll 60s linear infinite;
     font-family: 'Homemade Apple', cursive;
     font-size: 26px;
     color: #eacead;
+    width: 100%;
 }
 
 .scroll-content_2 span {
@@ -1437,7 +1442,6 @@ textarea:focus, select:focus {
         font-size: 16px;
         font-style: italic;
         text-align: left;
-        visibility: hidden;
     }
     
     .paragraph_button {
@@ -2502,7 +2506,6 @@ textarea:focus, select:focus {
     .repertorio-p {
         font-size: 16px;
         text-align: left;
-        visibility: hidden;
     }
     
     .btn-saber-mais {
@@ -2668,6 +2671,8 @@ textarea:focus, select:focus {
 }
 
 @media (max-width: 660px) {
+
+
     .banner {
       min-height: 910px;
     }
@@ -2734,10 +2739,15 @@ textarea:focus, select:focus {
     .imprensa{
         height: 950px;
     }
+
+    .testemunhos-imprensa {
+        padding: 0px;
+    }
     
 }
 
 @media (max-width: 414px) {
+
     .banner {
         background-size: cover;
         background-position: center;
@@ -2747,16 +2757,16 @@ textarea:focus, select:focus {
     }
     
     .banner-info {
-      padding-top: 25vh;
+      padding-top: 30vh;
     }
     
     .banner h1 {
-      font-size: 45pt;
-      padding: 20px;
+      font-size: 40pt;
+      padding: 40px;
     }
     
     .btn-contact {
-      font-size: 25pt;
+      font-size: 20pt;
     }
 
     .scroll {
@@ -2805,24 +2815,20 @@ textarea:focus, select:focus {
         }
     }
     
-    .testemunho3{
-        display: none;
-    }
-
-    .imprensa{
-        height: 950px;
-    }
+    
 
     .sobre-nos h1 {
-        font-size: 40pt;  
+        font-size: 30pt;
+        padding-left: 20px;  
     }
     
     .about-p {
         font-size: 16px;
+        padding:20px
     }
     
     .sobre-img {
-        min-width: 150px;
+        min-width: 80%;
     }
     
     
@@ -2838,6 +2844,7 @@ textarea:focus, select:focus {
     .mapa{
         padding: 5px;
         justify-content: center;
+        width: 80%;
     }
     
     .text-repertorio {
@@ -2851,16 +2858,45 @@ textarea:focus, select:focus {
     
     .banner2 {
         background-position: center;
-        height: 200px;
+        height: 150px;
     }
     
     .banner2 h1 {
-        font-size: 45pt;
+        font-size: 40pt;
+    }
+
+    .testemunhos-imprensa{
+        margin-top: 30px;
+    }
+
+    
+    .testemunhos-imprensa h3{
+        font-size: 16px;
+        padding: 0 30px;
+        padding-top: 20px;
     }
     
-    .testemunhos-imprensa {
-        padding: 40px;
+    .testemunhos-imprensa p{
+        font-size: 12px;
+        padding-left: 30px;
     }
+    
+    
+        
+    .btn-saber-mais2 {
+        font-size: 20pt;
+        margin-left: 30px;
+    }
+
+    .testemunho3{
+        display: none;
+    }
+
+    .imprensa{
+        height: 700px;
+    }
+
+    
     
 
     /* eventos */
@@ -2893,6 +2929,17 @@ textarea:focus, select:focus {
 
     .form-box{
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .left-column-contatos{
+        width: 90%;
+    }
+
+    .right-column-contatos{
+        width: 90%;
     }
     
     .contactos h2 {
