@@ -19,7 +19,7 @@ body{
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -42,7 +42,7 @@ body{
     margin: 0;
     padding: 0;
     display: flex;
-    padding-right: 20px;
+    margin-right: 20px;
 }
 
 .navbar .nav-links li {
@@ -108,7 +108,6 @@ body{
     background-position: top;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    width: 100vw;
 }
 
 .banner-info {
@@ -122,7 +121,7 @@ body{
 .banner h1 {
     font-family: 'Poiret One', cursive;
     color: #F9F7F7;
-    font-size: 80pt;
+    font-size: 90px;
     text-align: center;
     text-shadow: 3px 3px 3px rgba(38,29,3,0.72);
     padding: 25px;
@@ -132,7 +131,7 @@ body{
 
 .btn-contact {
     font-family: 'Poiret One', cursive;
-    font-size: 30pt;
+    font-size: 32px;
     color: #DDB079;
     border: 2pt #DDB079 solid;
     border-radius: 50px;
@@ -221,7 +220,7 @@ body{
 
 .sobre-nos h1 {
     font-family: 'Poiret One', cursive;
-    font-size: 65pt;
+    font-size: 65px;
     color: #7F4F0F;
     padding-top: 80px;
     padding-left: 60px;    
@@ -234,7 +233,6 @@ body{
     padding-top: 40px;
     padding-left: 120px;
     text-align: left;
-    min-width: 85vw;
 }
 
 .sobre-img {
@@ -255,11 +253,10 @@ body{
 .scroll-content {
     display: inline-block;
     white-space: nowrap;
-    animation: scroll 60s linear infinite;
+    animation: scroll 120s linear infinite;
     font-family: 'Homemade Apple', cursive;
     font-size: 26px;
     color: #DDB079;
-    width: 100%;
 }
 
 .scroll-content span {
@@ -305,7 +302,7 @@ body{
 
 .btn-saber-mais {
     font-family: 'Poiret One', cursive;
-    font-size: 28pt;
+    font-size: 32px;
     color: #7F4F0F;
     border: 2pt #dac1a1 solid;
     border-radius: 50px;
@@ -348,21 +345,19 @@ a {
     background-attachment: fixed;
     align-items: center;
     justify-content: center;
-    height: 400px;
     display: flex;
 }
 
 .banner2 h1 {
     font-family: 'Poiret One', cursive;
     color: #F9F7F7;
-    font-size: 80pt;
+    font-size: 80px;
     text-align: center;
     text-shadow: 3px 3px 3px rgba(38,29,3,0.72);
 }
 
 .imprensa {
     align-items: center;
-    width: 100%;
 }
 
 .testemunhos-imprensa {
@@ -400,7 +395,7 @@ a {
 
 .btn-saber-mais2 {
     font-family: 'Poiret One', cursive;
-    font-size: 28pt;
+    font-size: 32px;
     color: #efdac2;
     border: 2pt #efdac2 solid;
     border-radius: 50px;
@@ -443,6 +438,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
 }
 
 
@@ -456,14 +452,13 @@ a {
     background-attachment: fixed;
     align-items: center;
     justify-content: center;
-    height: 400px;
     display: flex;
 }
 
 .banner3 h1 {
     font-family: 'Poiret One', cursive;
     color: #F9F7F7;
-    font-size: 80pt;
+    font-size: 80px;
     text-align: center;
     text-shadow: 3px 3px 3px rgba(38,29,3,0.72);
 }
@@ -476,7 +471,6 @@ a {
     justify-content: flex-end;
     display: flex;
     background-color: rgba(100, 52, 14, 0.389),rgba(100, 52, 14, 0.389);
-    min-height: 800px;
 }
 
 .event-history{
@@ -494,7 +488,7 @@ a {
 
 }
 
-  .social-icons-eventos h3{
+.social-icons-eventos h3{
     font-family: 'Roboto', sans-serif;
     font-size: 22px;
     color:#faa912;;
@@ -505,22 +499,22 @@ a {
     background-color: #7f4f0f;
     align-items: center;
     margin-bottom: 0;
-  }
-  
-  .social-icons-eventos li{
+}
+
+.social-icons-eventos li{
     display:inline-block;
     align-items: top;
-  }
-  
-  .social-icons-eventos li.title{
+}
+
+.social-icons-eventos li.title{
     margin-right:15px;
     text-transform:uppercase;
     color:#96a2b2;
     font-weight:700;
     font-size:13px
-  }
-  
-  .social-icons-eventos a{
+}
+
+.social-icons-eventos a{
     background-color:#f5ebdaa1;
     color:#818a91;
     font-size:16px;
@@ -534,30 +528,30 @@ a {
     -webkit-transition:all .2s linear;
     -o-transition:all .2s linear;
     transition:all .2s linear
-  }
-  
-  .social-icons-eventos a:active,.social-icons-eventos a:focus,.social-icons-eventos a:hover{
+}
+
+.social-icons-eventos a:active,.social-icons-eventos a:focus,.social-icons-eventos a:hover{
     color:#fff;
-  }
-  
-  .social-icons-eventos.size-sm a{
+}
+
+.social-icons-eventos.size-sm a{
     line-height:34px;
     height:34px;
     width:34px;
     font-size:14px
-  }
-  
-  .social-icons-eventos a.instagram-eventos:hover{
+}
+
+.social-icons-eventos a.instagram-eventos:hover{
     background-color: #f5ebdae3;
-  }
-  
-  .social-icons-eventos a.facebook-eventos:hover{
+}
+
+.social-icons-eventos a.facebook-eventos:hover{
     background-color:#f5ebdae3;
-  }
-  
-  .social-icons-eventos a.youtube-eventos:hover{
+}
+
+.social-icons-eventos a.youtube-eventos:hover{
     background-color:#f5ebdae3;
-  }
+}
   
 
 .event-history {
@@ -723,11 +717,10 @@ textarea:focus, select:focus {
 .scroll-content_2 {
     display: inline-block;
     white-space: nowrap;
-    animation: scroll 60s linear infinite;
+    animation: scroll 120s linear infinite;
     font-family: 'Homemade Apple', cursive;
     font-size: 26px;
     color: #eacead;
-    width: 100%;
 }
 
 .scroll-content_2 span {
@@ -744,8 +737,7 @@ textarea:focus, select:focus {
 /* galeria */
 
 .grid-container {
-    width: 100%;
-    max-width: 1500px;
+    width: 85vw;
     margin: 0 auto;
     padding: 50px 20px;
     display: grid;
@@ -800,11 +792,12 @@ textarea:focus, select:focus {
     justify-content: center;
     padding: 10px;
     width: 100%;
+    height: 100%;
 }
 
 .video-gallery .video-container .video{
-    height: 45vh;
-    width: 40vw;
+    min-height: 40vh;
+    min-width: 35vw;
     border-radius: 5px;
     border: 5px solid #f5ebda3b;
     box-shadow: 0 5px 5px rgba(71, 37, 9, 0.2); 
@@ -816,7 +809,7 @@ textarea:focus, select:focus {
 .video-gallery .video-container .video iframe{
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
     transition: .2s linear;
 }
 
@@ -854,14 +847,13 @@ textarea:focus, select:focus {
     background-attachment: fixed;
     align-items: center;
     justify-content: center;
-    height: 400px;
     display: flex;
 }
 
 .banner4 h1 {
     font-family: 'Poiret One', cursive;
     color: #F9F7F7;
-    font-size: 80pt;
+    font-size: 80px;
     text-align: center;
     text-shadow: 3px 3px 3px rgba(38,29,3,0.72);
 }
@@ -877,7 +869,6 @@ textarea:focus, select:focus {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 100%;
     justify-content: center;
     padding: 50px 0;
 }
@@ -1024,7 +1015,7 @@ textarea:focus, select:focus {
 
 .form-submit {
     font-family: 'Poiret One', cursive;
-    font-size: 28pt;
+    font-size: 32px;
     color: #a1761f70;
     border: 2pt #a1761f70 solid;
     border-radius: 50px;
