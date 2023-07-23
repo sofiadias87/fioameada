@@ -334,8 +334,10 @@
                 <script>
                     function sendEmail(){
                         Email.send({
-                            secureToken: "767e7842-bb10-48ff-a66e-df7b03fc3acb",
-                            To : "vozes.tradicionais.femininas@gmail.com",
+                            Host : "smtp.gmail.com",
+                            Username : "",
+                            Password : "",
+                            To : 'vozes.tradicionais.femininas@gmail.com',
                             From : document.getElementById("email").value,
                             Subject : "Novo Formulário de Contacto",
                             Body : "Nome: " + document.getElementById("name").value
