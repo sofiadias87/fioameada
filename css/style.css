@@ -2145,8 +2145,7 @@ textarea:focus, select:focus {
     }
 
     .logo-form{
-        padding: 5px;
-        margin-bottom: 20px 0;
+        padding: 30px;
     }
 }
 
