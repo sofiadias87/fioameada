@@ -107,7 +107,14 @@ body{
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
-    background-attachment: scroll;
+    background-attachment: fixed;
+}
+
+.content{
+    position: absolute;
+    left: 50%; 
+    margin-top: 0;
+    transform: translateX(-50%);
 }
 
 .banner-info {
