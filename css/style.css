@@ -107,14 +107,7 @@ body{
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
-.content{
-    position: absolute;
-    left: 50%; 
-    margin-top: 0;
-    transform: translateX(-50%);
+    background-attachment: scroll;
 }
 
 .banner-info {
@@ -122,7 +115,7 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding-top: 27vh;
+    padding-top: 34vh;
 }
 
 .banner h1 {
