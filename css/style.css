@@ -125,7 +125,7 @@ body{
     text-align: center;
     text-shadow: 3px 3px 3px rgba(38,29,3,0.72);
     padding: 25px;
-    visibility: visible;
+    visibility: hidden;
     font-weight: 500;
 }
 
@@ -138,7 +138,7 @@ body{
     padding: 0px 10px;
     background-color: transparent;
     text-align: center;
-    visibility: visible;
+    visibility: hidden;
 }
 
 .btn-contact:hover {
@@ -162,7 +162,7 @@ body{
 .scroll {
 	width: 60px;
 	height: 60px;
-    visibility: visible;
+    visibility: hidden;
 	border: 2px solid #f5ebdab3;
 	border-radius: 50%;
 	position: relative;
