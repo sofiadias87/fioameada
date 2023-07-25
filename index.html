@@ -308,7 +308,7 @@
                     </div>
                 </div>
                 <div class="hidden-2 right-column-contatos col-lg-6 col-md-12 col-xs-12">
-                    <form onsubmit="sendEmail(); reset(); return false;">
+                    <form action="https://formsubmit.co/vozes.tradicionais.femininas@gmail.com" method="POST" >
                         <div class="form-field">
                             <label for="name">Nome:</label>
                             <input type="text" id="name" name="name" placeholder="Adelaide Adelaidinha" required>
@@ -326,29 +326,10 @@
                             <textarea id="message" name="message" placeholder="Escreva aqui..." required></textarea>
                         </div>
                         <div class="form-submit">
-                            <input href="mailto:sofiadias70@gmail.com" type="submit" value="ENVIAR">
+                            <input id="button" href="mailto:sofiadias70@gmail.com" type="submit" value="ENVIAR">
                         </div>
                     </form>
                 </div>
-                <script src="https://smtpjs.com/v3/smtp.js"></script>
-                <script>
-                    function sendEmail(){
-                        Email.send({
-                            Host : "smtp.gmail.com",
-                            Username : "fioameada.contactos@gmail.com",
-                            Password : "fikqrhorqmhgbkcq",
-                            To : 'vozes.tradicionais.femininas@gmail.com',
-                            From : document.getElementById("email").value,
-                            Subject : "Novo Formulário de Contacto",
-                            Body : "Nome: " + document.getElementById("name").value
-                                + "<br> Email: " + document.getElementById("email").value
-                                + "<br> Assunto: " + document.getElementById("subject").value
-                                + "<br> Mensagem: " + document.getElementById("message").value
-                        }).then(
-                        message => alert("Mensagem enviada com sucesso!")
-                        );
-                    }
-                </script>
             </div>
         </div>
 
