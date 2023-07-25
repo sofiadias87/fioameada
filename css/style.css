@@ -1330,8 +1330,7 @@ textarea:focus, select:focus {
 .logo-form{
     display: flex;
     justify-content: center;
-    opacity: 0.5;
-    margin-bottom: 0;
+    opacity: 0.7;
     padding: 30px 0;
 }
 
@@ -2144,10 +2143,6 @@ textarea:focus, select:focus {
         font-size: 15px;
     }
 
-    .logo-form{
-        padding: 30px;
-        margin-bottom: 30px;
-    }
 }
 
 @media (max-width: 450px) {
