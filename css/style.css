@@ -2127,7 +2127,7 @@ textarea:focus, select:focus {
         color: #f1efeee0;
         font-weight: 300;
         text-align: center;
-        padding: 0;
+        padding: 0 10px;
         margin: 0;
     }
     
@@ -2136,7 +2136,7 @@ textarea:focus, select:focus {
         font-size: 20px;
         font-weight: 200;
         color:#f1efee8f;
-        padding: 0px;
+        padding: 0 10px;
         margin: 20px 0;
     }
 
