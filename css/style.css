@@ -1277,8 +1277,6 @@ textarea:focus, select:focus {
     filter: blur(10px);
 }
 
-
-
 .show{
     opacity: 1;
     transition: all 1.2s;
@@ -1291,7 +1289,6 @@ textarea:focus, select:focus {
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
-    opacity: 0.9;
 }
 
 
@@ -1301,7 +1298,7 @@ textarea:focus, select:focus {
     font-weight: 300;
     text-align: center;
     padding: 30px;
-    text-shadow: 1px 1px 3px rgba(38,29,3,0.72);;
+    text-shadow: 1px 1px 3px rgba(38,29,3,0.72);
 }
 
 .box-container h3{
@@ -1311,7 +1308,7 @@ textarea:focus, select:focus {
     color:#f1efee8f;
     padding: 30px;
     text-align: center;
-    text-shadow: 1px 1px 3px rgba(38,29,3,0.72);;
+    text-shadow: 1px 1px 3px rgba(38,29,3,0.72);
 }
 
 .box-container a{
