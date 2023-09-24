@@ -166,7 +166,7 @@ body{
 	border: 2px solid #f5ebdab3;
 	border-radius: 50%;
 	position: relative;
-    margin-top: 11vh;
+    margin-top: 6vh;
     margin-bottom: 6vh;
 	animation: down 1s infinite;
 	-webkit-animation: down 1s infinite;
@@ -473,6 +473,31 @@ a {
     background-color: rgba(100, 52, 14, 0.389),rgba(100, 52, 14, 0.389);
 }
 
+.select-event { 
+    max-height: 370px; 
+    overflow-y: scroll;
+}
+
+.select-event::-webkit-scrollbar {
+    width: 10px;    
+}
+
+.select-event::-webkit-scrollbar-track {
+    background: transparent; 
+}
+
+
+.select-event::-webkit-scrollbar-thumb {
+    background: #faa912;
+    border-radius: 5px;
+}
+
+
+.select-event::-webkit-scrollbar-button {
+    display: none;
+}
+
+
 .event-history{
     display: flex;
     flex-direction: row;
@@ -485,6 +510,7 @@ a {
     align-items: center; 
     margin-bottom:80px;
     justify-content: center;
+    margin-top: 10px
 
 }
 
@@ -896,7 +922,7 @@ textarea:focus, select:focus {
     margin-bottom: 10px;
     font-family: 'Poiret One', cursive;
     color: #7F4F0F;
-    font-size: 65pt;
+    font-size: 55pt;
     align-items: center;
 }
 
@@ -1922,8 +1948,7 @@ textarea:focus, select:focus {
             left: 12px;
             width: 12px;
             height: 12px;
-        }
-        
+        }        
     }
     
     .sobre-nos h1 {
@@ -2404,4 +2429,3 @@ textarea:focus, select:focus {
         justify-content: center;
     }
 }
-
