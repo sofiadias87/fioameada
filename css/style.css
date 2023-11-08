@@ -1358,9 +1358,9 @@ textarea:focus, select:focus {
 
 .box-container-ml .maria-liberdade h3{
     font-family: 'Special Elite';
-    font-size: 26px;
+    font-size: 22px;
     color: rgb(33, 33, 33);
-    line-height: 27px;
+    line-height: 28px;
     padding: 10px;
     text-align: center;
 }
@@ -1375,7 +1375,6 @@ textarea:focus, select:focus {
 .logo-form-ml{
     display: flex;
     justify-content: center;
-    padding-bottom: 10px;
 }
 
 .logo-ml{
