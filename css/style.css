@@ -1361,7 +1361,7 @@ textarea:focus, select:focus {
     font-size: 26px;
     color: rgb(33, 33, 33);
     line-height: 27px;
-    padding: 15px, 0px;
+    padding: 10px;
     text-align: center;
 }
 
