@@ -166,8 +166,8 @@ body{
 	border: 2px solid #f5ebdab3;
 	border-radius: 50%;
 	position: relative;
-    margin-top: 6vh;
-    margin-bottom: 6vh;
+    margin-top: 3vh;
+    margin-bottom: 8vh;
 	animation: down 1s infinite;
 	-webkit-animation: down 1s infinite;
 	&::before {
